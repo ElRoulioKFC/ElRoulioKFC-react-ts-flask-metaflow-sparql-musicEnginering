@@ -16,13 +16,6 @@ def index():
     return app.send_static_file('index.html')
 
 
-@app.route('/api/time')
-def get_current_time():
-    return {'time': time.time()}
-
-@app.route('/api/test')
-def get_current_temperature():  
-    return {'test': 20}
 
 @app.route('/api/test2')
 def getTest():
