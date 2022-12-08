@@ -1,6 +1,6 @@
 import { Button, TextField, Typography } from "@mui/material";
 import React, { useEffect } from "react";
-import { callTest } from "../interface";
+import { callTest,callHello } from "../interface";
 
 export function HomePage(){
     const [ezTest, setEzTest] = React.useState<string>("");
@@ -38,6 +38,9 @@ export function HomePage(){
                 <p>
                     <p>calcul: {ezTest}</p>
                 </p>
+            </div>
+            <div>
+                <Button variant="contained" onClick={() => { callHello()} }>callHello</Button>
             </div>
         </div>
         </div>

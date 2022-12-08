@@ -1,7 +1,7 @@
 import time
 from flask import Flask
 from flask import request
-from model.main import test,essai
+from model.main import test,essai,launchMyFlow
 
 app = Flask(__name__, static_folder='../build', static_url_path='/')
 
@@ -28,3 +28,8 @@ def getEssai():
     un = request.args.get('un')
     deux = request.args.get('deux')
     return {'te': essai(int(un),int(deux))}
+
+@app.route('/api/launchFlow')
+def launchFlow():
+    launchMyFlow()
+    return {'te': 'ok'}

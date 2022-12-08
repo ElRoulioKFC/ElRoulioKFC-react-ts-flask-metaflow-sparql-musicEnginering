@@ -9,3 +9,8 @@ export async function callTest(un:string,deux:string):Promise<string> {
       ;});
       return response;
 }
+export async function callHello() {
+    let path: string = "/api/launchFlow"
+
+    const response = await fetch(path)
+}
